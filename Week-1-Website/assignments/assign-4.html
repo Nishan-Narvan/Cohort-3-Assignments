@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment-4</title>
+    <style>
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .Left {
+            background-color: red;
+            width: 30%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-div {
+            display: flex;
+            flex-wrap: wrap;  /* 🟢 Wrap text to next line */
+            max-width: 100%;  /* 🟢 Ensure it doesn't overflow */
+            word-break: break-word;  /* 🟢 Break long words if needed */
+        }
+
+        .Right-div {
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 70%;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .ROW {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        h3 {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Left">
+            <h3>Left</h3>
+            <div class="text-div">
+                Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            </div>
+        </div>
+     
+        <div class="Right-div">
+            <div class="ROW">
+                <h3>r1E1</h3>
+                <h3>r1E2</h3>
+                <h3>r1E3</h3>
+            </div>
+            <div class="ROW">
+                <h3>r2E1</h3>
+                <h3>r2E2</h3>
+                <h3>r2E3</h3>
+            </div>
+            <div class="ROW">
+                <h3>r3E1</h3>
+                <h3>r3E2</h3>
+                <h3>r3E3</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
