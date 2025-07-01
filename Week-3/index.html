@@ -6,17 +6,47 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="inputField" placeholder="Type something...">
-    <button onclick="myFunction()">Submit</button>
-    <div>sdsdsdds</div>
+    <div>
+        <input type="text" id="inpo" placeholder="enter your task" > 
+        <button onclick="Myfunction()" id="btn">Add</button>
+    </div>
+    
 </body>
 <script>
-    function myFunction() {
-        const el=document.querySelector("input").value;
-        const newEl = document.createElement("div");
-        newEl.innerHTML= el;
 
-        document.body.appendChild(newEl);
-    }
+let d=0;
+function Myfunction (){
+    
+    let b = document.getElementById('inpo').value;
+    const a = document.createElement('div');
+    a.innerHTML = b;
+    
+    a.setAttribute('id',d);
+    d++;
+    
+
+    let c = document.createElement('button');
+    c.innerHTML = 'Delete';
+    c.setAttribute('onclick',`Deletefunction(${a.id})`);
+
+
+    a.appendChild(c);
+    
+    
+
+   
+    
+
+    
+
+
+    a.style.backgroundColor = "red";
+    document.body.appendChild(a);
+}
+ function Deletefunction(id){
+    document.getElementById(id).remove();
+}
+
 </script>
 </html>
+<!-- String concatenation method ugly, innerHTML= "<div>" + value + "</div><button>Delete onClick=myFunction(a.id)</button>" -->
